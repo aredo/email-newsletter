@@ -1,0 +1,757 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title></title>
+	<style type="text/css">
+		/* Based on The MailChimp Reset INLINE: Yes. */  
+		/* Client-specific Styles */
+		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+		body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0; background: #F7F7F7} 
+		/* Prevent Webkit and Windows Mobile platforms from changing default font sizes.*/ 
+		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
+		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
+		#backgroundTable {margin:0; padding:0; width:600px; line-height: 100% !important;}
+		/* End reset */
+		/* Some sensible defaults for images
+		Bring inline: Yes. */
+		img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;} 
+		a img {border:none;} 
+		.image_fix {display:block;}
+		/* Yahoo paragraph fix
+		Bring inline: Yes. */
+		p {margin: 1em 0;}
+		/* Hotmail header color reset
+		Bring inline: Yes. */
+		h1, h2, h3, h4, h5, h6 {color: black;}
+		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue;}
+
+		h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {
+		color: #4E8506 !important; /* Preferably not the same color as the normal header link color.  There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {
+		color: #4E8506 !important; /* Preferably not the same color as the normal header link color. There is limited support for psuedo classes in email clients, this was added just for good measure. */
+		}
+
+		/* Outlook 07, 10 Padding issue fix
+		Bring inline: No.*/
+		table td {border-collapse: collapse;}
+
+		/* Remove spacing around Outlook 07, 10 tables
+		Bring inline: Yes */
+		table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+
+		/* Styling your links has become much simpler with the new Yahoo.  In fact, it falls in line with the main credo of styling in email and make sure to bring your styles inline.  Your link colors will be uniform across clients when brought inline.
+		Bring inline: Yes. */
+		a, a:visited, a:active {color: #4E8506; text-decoration: none}
+
+
+		/***************************************************
+		****************************************************
+		MOBILE TARGETING
+		****************************************************
+		***************************************************/
+		@media only screen and (max-width: 320px) {
+			
+			table[class="table"], td[class="cell"],
+			.banner a img{
+				width: 300px !important;
+			}	
+		}
+		
+		@media only screen and (max-width: 480px) {
+			/* Part one of controlling phone number linking for mobile. */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: #003399 !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+			
+			table {
+				position: relative;
+			}
+			
+			table[class="table"], td[class="cell"],
+			.banner a img{
+				width: 460px !important;
+			}
+            
+            td[class="logo"] a img{
+                width: 90%;
+            }
+		}
+
+		/* More Specific Targeting */
+
+		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+		/* You guessed it, ipad (tablets, smaller screens, etc) */
+			/* repeating for the ipad */
+			a[href^="tel"], a[href^="sms"] {
+						text-decoration: none;
+						color: blue; /* or whatever your want */
+						pointer-events: none;
+						cursor: default;
+					}
+
+			.mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+						text-decoration: default;
+						color: #003399 !important;
+						pointer-events: auto;
+						cursor: default;
+					}
+		}
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+		/* Put your iPhone 4g styles in here */ 
+		}
+
+		/* Android targeting */
+		@media only screen and (-webkit-device-pixel-ratio:.75){
+		/* Put CSS for low density (ldpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1){
+		/* Put CSS for medium density (mdpi) Android layouts in here */
+		}
+		@media only screen and (-webkit-device-pixel-ratio:1.5){
+		/* Put CSS for high density (hdpi) Android layouts in here */
+		}
+		/* end Android targeting */
+                a { text-decoration:none; }
+	</style>
+</head>
+<body style="background:#F7F7F7">
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" width="600px" class="table" style="margin: 0 auto">
+	<tr>
+		<td valign="top" align="center"> 
+		<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0">
+			<tr>
+				<td style="padding: 10px 0 10px 0; color: #666; font-size: 12px; font-family: Arial; background: #EEE" align="center">
+					Trouble viewing this email? <a href="*|ARCHIVE|*">View it on the web</a>
+				</td>
+			</tr>
+			<tr>
+				<td style="padding: 20px 0 5px 0">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table">
+						<tr>
+							<td style="width: 40%" align="left" class="logo">	
+								<a href="http://www.wego.com.au/deals?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; position: relative;">
+									<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/11/wego-au.png" alt="Wego Travel Newsletter">
+								</a>
+							</td>
+							<td align="right" style="width:60%;">
+								<table cellpadding="0" cellspacing="0" border="0" align="right" width="88px" style="background-color:#333; color: #fff">
+									<tr>
+										<td rowspan="2">
+											<strong style="font-size: 36px; font-family: Arial; display: block; margin:0; font-weight: normal; padding:0 0 0 5px">*|DATE:d|*</strong>
+										</td>
+										<td valign="middle" style="padding:5px 0 0 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:M|*</strong></td>
+									</tr>
+									<tr>
+										<td style="padding:0 0 5px 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:Y|*</strong></td>
+									</tr>
+								</table>
+								<table cellpadding="0" cellspacing="0" border="0" align="right" width="auto" style="color: #333; clear:both; margin: 10px 0 0 0; font-size: 14px; font-family: Arial">
+									<tr>
+										<td><strong style="display: block; font-size: 15px; color:#333">
+										Save time, pay less, travel more</strong></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 20px 0 10px 0; width: 600px" class="cell">
+                  <center class="banner"><a href="http://on.fb.me/PqPNJo">  <img src="http://cdn.wego.com/banners/banner_image/image/14/120816r1-Newsletter-Banner-580-200px.jpg" alt="Win 6 nights in Bali! Share your unusual aircraft experience">
+</a></center>
+				</td>
+			</tr>
+			
+			<tr>
+				<td style="padding:4px 0; alignment-adjust: central">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="300px" style="font-size: 13px; font-family: Arial; text-align: center; padding:0 10px">
+						<tr>
+							<td align="center" style="width:95px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
+								<table>
+									<tr>
+										<td style="padding: 0 3px">
+											<img style="margin-top: 5px; border: none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/23/icon-flight.png">
+										</td>
+										<td>
+											<span><a style="text-decoration:none; color: #444" href="http://www.wego.com.au/flights?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Flights</a></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="12px"></td>
+							<td align="center" style="width: 95px; padding: 2px 0;margin:0 10px; background:#99CC00; border: 1px solid #8EC000;">
+								<table>
+									<tr>
+										<td style="padding: 0 3px">
+											<img style="border:none"  src="http://cdn.wego.com/newsletters/newsletter_resource/file/24/icon-hotel.png">
+										</td>
+										<td>
+											<span><a style="color: #444;text-decoration:none" href="http://www.wego.com.au/hotels?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Hotels</a></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td width="12px"></td>
+							<td align="center" style="width:105px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
+								<table>
+									<tr>
+										<td style="padding: 0 3px">
+											<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/25/icon-packages.png">
+										</td>
+										<td>
+											<span><a style="color: #444;text-decoration:none" href="http://www.wego.com.au/packages?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Packages</a></span>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td height="3px"></td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 10px 0 20px 0">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table">
+						<tr>
+							<td style="width: 150px" align="middle">
+							<div style="border-top: 1px solid #ccc "></div>
+							</td>
+							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center">
+								THIS WEEK'S FEATURED DEALS
+							</td>
+							<td style="width: 150px">
+								<div style="border-top: 1px solid #ccc "></div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <!--
+			<tr>
+				<td style="padding:0; width: 600px" valign="top" width="600px" class="cell">
+					<table cellspacing="0" cellpadding="0" border="0">
+						<tr>
+						<td style="vertical-align:top">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style=" font-size: 12px;color: #999; font-family: Arial;">
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/245/thumb_image2.jpg" style="border:none" width="170" />
+											</a>
+											<br />
+											<span style="display: block; margin:5px 0; font-size: 20px; line-height: normal;color:#444">&nbsp;<strong>A$645</strong></span>
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												Travel to Thailand and savour the many sights on an adventure, Save up to 25 per cent when you book by August 10 2012
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">intrepidtravel.com</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Package Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fpackage_deals%2F245%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FLPBCro&amp;text=%23TravelDeal%20on%20%40wego%3A%20Travel%20to%20Thailand%20and%20savour%20the%20many%20sights%20on%20an%20adventure%2C%20Save%20up%20to%2025%20per%20cent%20when%20you..." style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/246/thumb_ecruising-san-francisco_master_1_.jpg" style="border:none" width="170" />
+											</a>
+											<br />
+											<span style="display: block; margin:5px 0; font-size: 20px; line-height: normal;color:#444">&nbsp;<strong>A$5,889</strong></span>
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												 See the world with this 28 night cruise offer, experience Hawaii, New Zealand, North America and the South Pacific
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">ecruising.travel</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Package Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fpackage_deals%2F246%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FQHMM83&amp;text=%23TravelDeal%20on%20%40wego%3A%20%20See%20the%20world%20with%20this%2028%20night%20cruise%20offer%2C%20experience%20Hawaii%2C%20New%20Zealand%2C%20North%20America%20..." style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+					</table>
+						<td style="vertical-align:top">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style="margin-right:10px; margin-left:10px;  font-size: 12px;color: #999; font-family: Arial;">
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/605/thumb_visitlondon-640x360.jpg" style="border:none" width="170" />
+											</a>
+											<br />
+											<span style="display: block; margin:5px 0; font-size: 20px; line-height: normal;color:#444">&nbsp;<strong>A$82</strong></span>
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												Want to visit London but unwilling to brave the Olympic crowds? Check out these deals from for the post-Olympic duration
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">traveleasy.com.au</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Hotel Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fhotel_deals%2F605%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FNVhhCq&amp;text=%23TravelDeal%20on%20%40wego%3A%20Want%20to%20visit%20London%20but%20unwilling%20to%20brave%20the%20Olympic%20crowds%3F%20Check%20out%20these%20deals%20from%20for..." style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/600/thumb_MBS_AugustOffer-200x200.jpeg" style="border:none" width="170" />
+											</a>
+											<br />
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												Marina Bay Sands Special for the best deals this season! Up to 42% off on our peak rates this July, Aug &amp; Sept. Exclusive only if booked directly. Book by 31 July
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">marinabaysands.com</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Hotel Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fhotel_deals%2F600%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FLPCvQx&amp;text=%23TravelDeal%20on%20%40wego%3A%20Marina%20Bay%20Sands%20Special%20for%20the%20best%20deals%20this%20season!%20Up%20to%2042%25%20off%20on%20our%20peak%20rates%20this%20..." style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+					</table>
+						<td style="vertical-align:top">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style=" font-size: 12px;color: #999; font-family: Arial;">
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/598/thumb_49845.jpg" style="border:none" width="170" />
+											</a>
+											<br />
+											<span style="display: block; margin:5px 0; font-size: 20px; line-height: normal;color:#444">&nbsp;<strong>A$99</strong></span>
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												 Enjoy the pristine beaches of Esperance with with this Standard Queen Room offer for two at the BEST WESTERN Hospitality Inn
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">quickbeds.com</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Hotel Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fhotel_deals%2F598%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FNVhhCs&amp;text=%23TravelDeal%20on%20%40wego%3A%20%20Enjoy%20the%20pristine%20beaches%20of%20Esperance%20with%20with%20this%20Standard%20Queen%20Room%20offer%20for%20two%20at%20t..." style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+							<tr>
+							<td valign="top">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+									<tr>
+										<td style="padding: 10px; " align="left">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/244/thumb_NUNN.jpg" style="border:none" width="170" />
+											</a>
+											<br />
+											<span style="display: block; margin:5px 0; font-size: 20px; line-height: normal;color:#444">&nbsp;<strong>A$817</strong></span>
+											<h3 style="background: #E6FFD9; margin: 5px 0; color:#333; padding: 5px 7px; font-size: 14px; font-weight: normal">
+                                              <a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color: #333;text-decoration:none">
+												Save up to 15 per cent on this incredible tour of America’s capitals, depart on August 13 2012
+											  </a>
+											</h3>
+											<span style="font-size: 12px; color:#666; text-decoration: none"><a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">gadventures.com</a></span><br />
+											<a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; background: #FF9900; border:1px solid #E68A00; padding: 2px 0; margin: 5px 0; width: 90px; text-align: center; color:#fff; text-decoration: none">
+												View Detail
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td valign="middle" style="background: #eee; padding: 0 10px">
+											<table cellspacing="0" cellpadding="0" border="0" style="width: 100%; table-layout:fixed"> 
+												<tr>
+													<td>
+														<div style="padding: 5px 0">
+														<span>Package Deal</span>
+														<span style="display: block; float: right">
+															<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fpackage_deals%2F244%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+															</a>&nbsp;
+															<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FQHMNZr&amp;text=%23TravelDeal%20on%20%40wego%3A%20Save%20up%20to%2015%20per%20cent%20on%20this%20incredible%20tour%20of%20America%E2%80%99s%20capitals%2C%20depart%20on%20August%2013%202012" style="text-decoration: none">
+																<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+															</a>
+														</span>
+														<div style="clear:both"></div>
+														</div>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>&nbsp;
+							</td>
+							</tr>
+					</table>
+						</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            -->
+			<tr>
+				<td style="padding: 0 0 15px 0" align="center">
+					<table width="160px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
+						<tr>
+							<td style="padding: 10px 0px;" align="center" valign="middle">
+								<a href="http://www.wego.com.au/deals?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:white; font-family: Arial; font-size: 16px; text-decoration: none">View more deals</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<td style="padding: 10px 0 20px 0;">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="padding:0; margin-top: 10px">
+						<tr>
+							<td style="width: 170px" align="middle">
+							<div style="border-top: 1px solid #ccc "></div>
+							</td>
+							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center">
+								TRAVEL EDITOR'S PICKS
+							</td>
+							<td style="width: 170px">
+								<div style="border-top: 1px solid #ccc "></div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+            <!--
+			<tr>
+				<td style="padding: 10px 0 2px 0; border:1px solid #ccc; background: #fff" align="center">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" style="padding:10px 10px 0 10px; background: #fff; margin: 0 auto; font-family: Arial; color: #666666;">
+						<tr>
+							<td rowspan="2" style="width: 150px; padding-bottom: 9px">
+                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+							  <img alt="Deal image" height="180" src="http://cdn.wego.com/deals/hotel_deal/image/14/thumb_koh-chang-amari-emerald-cove-koh-chang-186977.jpg" style="border:none" width="180" />
+							  </a>
+							</td>
+							<td style="width: 270px; padding: 0 10px" valign="top" align="left">
+								<div style="display: block; height: 145px; min-height: 144px;">
+								<h4 style="font-size: 18px; font-weight:normal; font-family: Arial; line-height: normal; padding: 7px; color: #333333; background: #E6FFD9; margin: 0 0 5px 0">
+									<a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:#333; text-decoration:none">
+									Exotic, romantic hideaway at the Amari Emerald Cove Koh Chang
+									</a>
+								</h4>
+								<p style="margin: 10px 0; font-size: 12px;">Secret no more! Thailand&#x27;s stunning 5 star luxury at Amari Emerald Cove Koh Chang. Secluded pristine beaches surrounded by exotic jungle-covered hills</p>
+								</div>
+							</td>
+							<td style="width: 110px; height: 145px; vertical-align: top" align="right">
+								<span style="font-size: 12px"><a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">splendia.com</a></span><br />
+								<a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" title="" style="display:block; width: 108px; margin-top: 4px; padding:5px 0 8px 0; vertical-align: baseline; height: 12px; text-align: center; border:1px solid #3E6B05; border:1px solid #3E6B05; background:#349200; font-size: 14px; color: #fff; text-decoration: none">
+								View Detail
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
+								<div style="display: block; margin:2px 0 0 10px; text-align: left; background: #eee; padding: 7px 0 7px 10px;">
+								<font style="font-size: 12px; display: block; width: 150px; float: left">Hotel Deal</font>
+								<span style="display: block; margin: 0; padding: 0 7px; float: right">
+									<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fhotel_deals%2F14%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+									</a>&nbsp;
+									<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FNSIZm6&amp;text=%23TravelDeal%20on%20%40wego%3A%20Exotic%2C%20romantic%20hideaway%20at%20the%20Amari%20Emerald%20Cove%20Koh%20Chang" style="text-decoration: none">
+										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+									</a>
+								</span>
+								<div style="clear: both"></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td rowspan="2" style="width: 150px; padding-bottom: 9px">
+                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+							  <img alt="Deal image" height="180" src="http://cdn.wego.com/deals/hotel_deal/image/73/thumb_pedrinho_1.jpg" style="border:none" width="180" />
+							  </a>
+							</td>
+							<td style="width: 270px; padding: 0 10px" valign="top" align="left">
+								<div style="display: block; height: 145px; min-height: 144px;">
+								<h4 style="font-size: 18px; font-weight:normal; font-family: Arial; line-height: normal; padding: 7px; color: #333333; background: #E6FFD9; margin: 0 0 5px 0">
+									<a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:#333; text-decoration:none">
+									Arty, historic and unique, Brazil&#x27;s UXUA Casa Hotel
+									</a>
+								</h4>
+								<p style="margin: 10px 0; font-size: 12px;">Be inspired by the evocative and historic artist haven of UXUA Casa Hotel in Brazil, designed by local artisans using traditional building methods and decorated with Brazilian art and antiques </p>
+								</div>
+							</td>
+							<td style="width: 110px; height: 145px; vertical-align: top" align="right">
+								<span style="font-size: 12px"><a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">uxua.com</a></span><br />
+								<a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" title="" style="display:block; width: 108px; margin-top: 4px; padding:5px 0 8px 0; vertical-align: baseline; height: 12px; text-align: center; border:1px solid #3E6B05; border:1px solid #3E6B05; background:#349200; font-size: 14px; color: #fff; text-decoration: none">
+								View Detail
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
+								<div style="display: block; margin:2px 0 0 10px; text-align: left; background: #eee; padding: 7px 0 7px 10px;">
+								<font style="font-size: 12px; display: block; width: 150px; float: left">Hotel Deal</font>
+								<span style="display: block; margin: 0; padding: 0 7px; float: right">
+									<a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.wego.com.au%2Fdeals%2Fcontinue%2Fhotel_deals%2F73%3Fts_code%3Dd4f4b%26utm_campaign%3Dau%26utm_medium%3Demail%26utm_source%3Dnewsletter" style="text-decoration: none">
+										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/8/fb-blue-ico.png">
+									</a>&nbsp;
+									<a href="https://twitter.com/share?url=http%3A%2F%2Fgo.wego.com%2FMHwRCn&amp;text=%23TravelDeal%20on%20%40wego%3A%20Arty%2C%20historic%20and%20unique%2C%20Brazil&#x27;s%20UXUA%20Casa%20Hotel" style="text-decoration: none">
+										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/9/tw-blue-ico.png">
+									</a>
+								</span>
+								<div style="clear: both"></div>
+								</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			-->
+			<tr>
+				<td style="padding: 25px 0 10px 0" align="center">
+					<table width="250px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
+						<tr>
+							<td style="padding: 10px 0;" align="center" valign="middle">
+								<a href="http://www.wego.com.au/deals/themes/travel-editor-s-picks?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:white; font-family: Arial; font-size: 16px; text-decoration: none">View all travel editor's picks</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<tr>
+				<td style="padding: 10px 0 0 0">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="padding:0">
+						<tr>
+							<td style="width: 195px" align="middle">
+							<div style="border-top: 1px solid #ccc "></div>
+							</td>
+							<td style="font-size: 16px;color: #333; font-family: Arial; text-align: center" align="center">
+								CONNECT WITH US
+							</td>
+							<td style="width: 195px">
+								<div style="border-top: 1px solid #ccc "></div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			
+			<!-- // Begin Social Media Wego Newsletter \ -->
+			<tr>
+				<td style="padding: 10px 0 10px 0; font-size: 12px; font-family: Arial;">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="color: #666">
+						<tr>
+							<td align="center" style="padding: 10px 0 15px 0">
+								<a href="http://www.facebook.com/wego.australia" title="Our Facebook" style="text-decoration: none">
+									<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/17/icon-social-facebook.gif" alt="Wego Facebook" />
+								</a>&nbsp;
+								<a href="https://twitter.com/wego" title="Follow us on twitter" style="text-decoration: none">
+									<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/19/icon-social-twitter.gif" alt="Wego Twitter" />
+								</a>&nbsp;
+								<a href="http://www.linkedin.com/company/207717?trk=tyah" title="Follow Us on Linkedin" style="text-decoration: none">
+									<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/18/icon-social-linkedin.gif" alt="Wego on Linkedin" />
+								</a>&nbsp;
+							</td>
+						</tr>
+						<tr>
+							<td align="center">
+								For any queries or comments, please email us at <a href="mailto:newsletter@wego.com">newsletter@wego.com</a>
+							</td align="center">
+						</tr>
+						<tr>
+							<td align="center" style="padding: 5px 0;">
+								Don't want your weekly travel deals? <a href="*|UNSUB|*">Unsubscribe here</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- // End Social Media Wego Newsletter \ -->
+			
+			<!-- // Begin Footer Wego Newsletter \ --> 
+			<tr>
+				<td style="padding: 10px 0 60px 0; font-size: 11px; font-family: Arial; background: #EEE">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="color: #666">
+						<tr>
+							<td style="width:270px;" align="right">
+								<a href="http://www.wego.com/newsletter/?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Subscribe</a>
+							</td>
+							<td style="width: 20px" align="center">|</td>
+							<td style="width:270px;">
+								<a href="http://www.wego.com/privacy/?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Privacy Policy</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding:3px 0"colspan="3" align="center">
+								Copyright 2012 Wego Pte Ltd. All rights reserved.
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" align="center">
+								Our mailing address: Wego Travel Pty Ltd / ABN 61 135 425 106 ACN 135 425 106, Level 23, 175 Liverpool Street, Sydney, 2000, NSW, Australia
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- // End Footer Wego Newsletter \ -->  
+		</table>
+		</td>
+	</tr>
+</table>  
+<!-- End of wrapper table -->
+</body>
+</html>

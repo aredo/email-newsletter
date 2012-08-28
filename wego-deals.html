@@ -5,7 +5,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<title></title>
-	<style type="text/css">
+	<style>
 		/* Based on The MailChimp Reset INLINE: Yes. */  
 		/* Client-specific Styles */
 		#outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
@@ -14,7 +14,7 @@
 		.ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */  
 		.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
 		/* Forces Hotmail to display normal line spacing.  More on that: http://www.emailonacid.com/forum/viewthread/43/ */ 
-		#backgroundTable {margin:0; padding:0; width:600px !important; line-height: 100% !important;}
+		#backgroundTable {margin:0; padding:0; width:600px; line-height: 100% !important;}
 		/* End reset */
 		/* Some sensible defaults for images
 		Bring inline: Yes. */
@@ -55,7 +55,15 @@
 		MOBILE TARGETING
 		****************************************************
 		***************************************************/
-		@media only screen and (max-device-width: 480px) {
+		@media only screen and (max-width: 320px) {
+			
+			table[class="table"], td[class="cell"],
+			.banner a img{
+				width: 300px !important;
+			}	
+		}
+		
+		@media only screen and (max-width: 480px) {
 			/* Part one of controlling phone number linking for mobile. */
 			a[href^="tel"], a[href^="sms"] {
 						text-decoration: none;
@@ -70,7 +78,15 @@
 						pointer-events: auto;
 						cursor: default;
 					}
-
+			
+			table {
+				position: relative;
+			}
+			
+			table[class="table"], td[class="cell"],
+			.banner a img{
+				width: 460px !important;
+			}
 		}
 
 		/* More Specific Targeting */
@@ -112,10 +128,10 @@
 	</style>
 </head>
 <body style="background:#F7F7F7">
-<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" width="600px" style="margin: 0 auto">
+<table cellpadding="0" cellspacing="0" border="0" id="backgroundTable" width="600px" class="table" style="margin: 0 auto">
 	<tr>
 		<td valign="top" align="center"> 
-		<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" style="padding:0">
+		<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0">
 			<tr>
 				<td style="padding: 10px 0 10px 0; color: #666; font-size: 12px; font-family: Arial; background: #EEE" align="center">
 					Trouble viewing this email? <a href="*|ARCHIVE|*">View it on the web</a>
@@ -123,23 +139,23 @@
 			</tr>
 			<tr>
 				<td style="padding: 20px 0 5px 0">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table">
 						<tr>
-							<td style="width: 240px" align="left">	
+							<td style="width:40%" align="left">	
 								<a href="http://www.wego.com.au/deals?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; position: relative;">
 										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/11/wego-au.png" alt="Wego Travel Newsletter">
 								</a>
 							</td>
-							<td align="right" style="width:340px;">
+							<td align="right" style="width:60%;">
 								<table cellpadding="0" cellspacing="0" border="0" align="right" width="88px" style="background-color:#333; color: #fff">
 									<tr>
 										<td rowspan="2">
-											<strong style="font-size: 36px; font-family: Arial; display: block; margin:0; font-weight: normal; padding:0 0 0 5px">*|DATE:d|*</strong>
+											<strong style="font-size: 36px; font-family: Arial; display: block; margin:0; font-weight: normal; padding:0 0 0 5px">28</strong>
 										</td>
-										<td valign="middle" style="padding:5px 0 0 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:M|*</strong></td>
+										<td valign="middle" style="padding:5px 0 0 0"><strong style="font-size: 14px; font-family: Arial">Sept</strong></td>
 									</tr>
 									<tr>
-										<td style="padding:0 0 5px 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:Y|*</strong></td>
+										<td style="padding:0 0 5px 0"><strong style="font-size: 14px; font-family: Arial">2012</strong></td>
 									</tr>
 								</table>
 								<table cellpadding="0" cellspacing="0" border="0" align="right" width="auto" style="color: #333; clear:both; margin: 10px 0 0 0; font-size: 14px; font-family: Arial">
@@ -155,11 +171,10 @@
 			</tr>
 			
 			<tr>
-				<td style="padding: 20px 0 10px 0; width: 600px">
-                  <center><a href="http://asiatravelexclusives.com/subscription">  <img src="http://cdn.wego.com/banners/banner_image/image/13/ate-580-x-200.jpg" alt="Subscribe for FREE and be inspired by the weekly destination stories and travel ideas @ Asia Travel Exclusives"></a></center>
+				<td style="padding: 20px 0 10px 0; width: 600px" class="cell">
+                  <center class="banner"><a href="http://asiatravelexclusives.com/subscription">  <img src="http://cdn.wego.com/banners/banner_image/image/13/ate-580-x-200.jpg" alt="Subscribe for FREE and be inspired by the weekly destination stories and travel ideas @ Asia Travel Exclusives"></a></center>
 				</td>
 			</tr>
-			
 			<tr>
 				<td style="padding:4px 0; alignment-adjust: central">
 					<table cellpadding="0" cellspacing="0" border="0" align="center" width="300px" style="font-size: 13px; font-family: Arial; text-align: center; padding:0 10px">
@@ -210,10 +225,10 @@
 			<tr>
 				<td height="3px"></td>
 			</tr>
-			
+			<!--
 			<tr>
 				<td style="padding: 10px 0 20px 0">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table">
 						<tr>
 							<td style="width: 150px" align="middle">
 							<div style="border-top: 1px solid #ccc "></div>
@@ -229,7 +244,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td style="padding:0; width: 600px" valign="top" width="600px">
+				<td style="padding:0; width: 600px" valign="top" width="600px" class="cell">
 					<table cellspacing="0" cellpadding="0" border="0">
 						<tr>
 						<td style="vertical-align:top">
@@ -660,6 +675,9 @@
 					</table>
 				</td>
 			</tr>
+			
+			-->
+			
 			<tr>
 				<td style="padding: 0 0 15px 0" align="center">
 					<table width="160px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
@@ -674,7 +692,7 @@
 
 			<tr>
 				<td style="padding: 10px 0 20px 0;">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" style="padding:0; margin-top: 10px">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0; margin-top: 10px">
 						<tr>
 							<td style="width: 170px" align="middle">
 							<div style="border-top: 1px solid #ccc "></div>
@@ -689,6 +707,7 @@
 					</table>
 				</td>
 			</tr>
+			<!--
 			<tr>
 				<td style="padding: 10px 0 2px 0; border:1px solid #ccc; background: #fff" align="center">
 					<table cellpadding="0" cellspacing="0" border="0" align="center" style="padding:10px 10px 0 10px; background: #fff; margin: 0 auto; font-family: Arial; color: #666666;">
@@ -772,6 +791,8 @@
 				</td>
 			</tr>
 			
+			-->
+			
 			<tr>
 				<td style="padding: 25px 0 10px 0" align="center">
 					<table width="250px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
@@ -786,7 +807,7 @@
 			
 			<tr>
 				<td style="padding: 10px 0 0 0">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" style="padding:0">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0">
 						<tr>
 							<td style="width: 195px" align="middle">
 							<div style="border-top: 1px solid #ccc "></div>
@@ -801,11 +822,10 @@
 					</table>
 				</td>
 			</tr>
-			
 			<!-- // Begin Social Media Wego Newsletter \ -->
 			<tr>
 				<td style="padding: 10px 0 10px 0; font-size: 12px; font-family: Arial;">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" style="color: #666">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="color: #666">
 						<tr>
 							<td align="center" style="padding: 10px 0 15px 0">
 								<a href="http://www.facebook.com/wego.australia" title="Our Facebook" style="text-decoration: none">
@@ -834,10 +854,10 @@
 			</tr>
 			<!-- // End Social Media Wego Newsletter \ -->
 			
-			<!-- // Begin Footer Wego Newsletter \ --> 
+			<!-- // Begin Footer Wego Newsletter \ -->
 			<tr>
 				<td style="padding: 10px 0 60px 0; font-size: 11px; font-family: Arial; background: #EEE">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" style="color: #666">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="color: #666">
 						<tr>
 							<td style="width:270px;" align="right">
 								<a href="http://www.wego.com/newsletter/?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">Subscribe</a>
