@@ -55,13 +55,6 @@
 		MOBILE TARGETING
 		****************************************************
 		***************************************************/
-		@media only screen and (max-width: 320px) {
-			
-			table[class="table"], td[class="cell"],
-			.banner a img{
-				width: 300px !important;
-			}	
-		}
 		
 		@media only screen and (max-width: 480px) {
 			/* Part one of controlling phone number linking for mobile. */
@@ -87,11 +80,140 @@
 			.banner a img{
 				width: 460px !important;
 			}
-            
-            td[class="logo"] a img{
+			
+			td[class="logo"] a img{
                 width: 90%;
             }
+			
+			table[ class="featured-item"]{
+				width: 140px !important;
+			}
+			table[ class="featured-item"] a.thumbnails img{
+				width: 130px !important
+			}
+			
+			td[class="ted-picks"]{
+				padding:  5px 5px 2px 5px !important;
+			}
+			td[class="ted-picks"] table[class="table"]{
+				width: 440px;
+				padding: 0 !important;
+			}
+			
+			td[class="ted-picks"] .thumbnail img{
+				width: 130px;
+				height: 130px;
+				padding: 0 0 10px
+			}
+			
+			td[class="ted-picks"] div.headline,
+			td[class="ted-picks"] td[class="col-3"]{
+				height: 100px !important;
+				min-height: 100px !important;
+			}
+			
+			td[class="ted-picks"] td[class="ted-pick-thumb"]{
+                vertical-align: top;
+                width: 120px !important
+            }
+            
+            td[class="ted-picks"] h4{
+                font-size: 13px !important;
+            }
+			td[class="ted-picks"] div p{
+				display: none;
+				visibility: hidden;
+			}
+			td[class="ted-picks"] td[class="socmed-ted-bar"]{
+				vertical-align: top;
+			}
+			td[class="ted-picks"] td[class="socmed-ted-bar"] div{
+				margin-top: 0 !important
+			}
+			td[class="ted-pict-bd"]{
+				width: 120px !important
+			}
+			td[class="conect-with-us-td"]{
+				width: 140px !important
+			}
+			td[class="feat-deal-td"]{
+				width: 90px !important;
+			}
 		}
+		
+		@media only screen and (max-width: 320px) {
+			
+			table.table, td.cell,
+			.banner a img{
+				width: 300px !important;
+			}
+			td.logo a img{
+                width: 100% !important;
+            }
+			td.ted-pict-bd{
+				width: 19px !important;
+				font-size: 14px !important;
+			}
+			td.conect-with-us-td{
+				width: 30px !important;
+				font-size: 14px !important;
+			}
+			td.feat-deal-td{
+				width: 10px !important;
+				font-size: 14px !important;
+			}
+			
+			td.tagline strong{
+				font-size: 1.2em !important;
+				text-align: right;
+			}
+		}
+		
+		@media only screen and (max-width: 240px) {
+			
+			table.table, td.cell,
+			.banner a img{
+				width: 240px !important;
+			}
+			
+			td.tagline strong{
+				font-size: 1em !important;
+			}
+			
+			table.navigation td.separator{ 
+				width: 2px !important
+			}
+			
+			td.first,
+			td.second,
+			td.three{
+				width: 60px !important;
+				margin: 0 3px !important;
+			}
+			td.first table,
+			td.second table,
+			td.three table{
+				width: 60px !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+			
+			td.ted-pict-bd,
+			td.feat-deal-td{
+				width: 10px !important;
+				font-size: 13px !important;
+			}
+			
+			td.conect-with-us-td{
+				width: 25px !important;
+				font-size: 13px !important;
+			}
+			
+			table.view-all-ted{
+				width: 210px !important;
+			}
+		}
+
 
 		/* More Specific Targeting */
 
@@ -145,26 +267,26 @@
 				<td style="padding: 20px 0 5px 0">
 					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table">
 						<tr>
-							<td style="width: 40%" align="left" class="logo">	
+							<td style="width:40%" align="left" class="logo">	
 								<a href="http://www.wego.com.au/deals?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="display: block; position: relative;">
-									<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/11/wego-au.png" alt="Wego Travel Newsletter">
+										<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/11/wego-au.png" alt="Wego Travel Newsletter">
 								</a>
 							</td>
-							<td align="right" style="width:60%;">
+							<td align="right" style="width:60%">
 								<table cellpadding="0" cellspacing="0" border="0" align="right" width="88px" style="background-color:#333; color: #fff">
 									<tr>
 										<td rowspan="2">
-											<strong style="font-size: 36px; font-family: Arial; display: block; margin:0; font-weight: normal; padding:0 0 0 5px">*|DATE:d|*</strong>
+											<strong style="font-size: 36px; font-family: Arial; display: block; margin:0; font-weight: normal; padding:0 0 0 5px">01</strong>
 										</td>
-										<td valign="middle" style="padding:5px 0 0 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:M|*</strong></td>
+										<td valign="middle" style="padding:5px 0 0 0"><strong style="font-size: 14px; font-family: Arial">Sept</strong></td>
 									</tr>
 									<tr>
-										<td style="padding:0 0 5px 0"><strong style="font-size: 14px; font-family: Arial">*|DATE:Y|*</strong></td>
+										<td style="padding:0 0 5px 0"><strong style="font-size: 14px; font-family: Arial">2012</strong></td>
 									</tr>
 								</table>
 								<table cellpadding="0" cellspacing="0" border="0" align="right" width="auto" style="color: #333; clear:both; margin: 10px 0 0 0; font-size: 14px; font-family: Arial">
 									<tr>
-										<td><strong style="display: block; font-size: 15px; color:#333">
+										<td class="tagline"><strong style="display: block; font-size: 15px; color:#333">
 										Save time, pay less, travel more</strong></td>
 									</tr>
 								</table>
@@ -183,10 +305,10 @@
 			
 			<tr>
 				<td style="padding:4px 0; alignment-adjust: central">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="300px" style="font-size: 13px; font-family: Arial; text-align: center; padding:0 10px">
+					<table class="navigation" cellpadding="0" cellspacing="0" border="0" align="center" width="300px" style="font-size: 13px; font-family: Arial; text-align: center; padding:0 10px">
 						<tr>
-							<td align="center" style="width:95px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
-								<table>
+							<td class="first" align="center" style="width:95px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
+								<table cellpadding="0" cellspacing="0" border="0">
 									<tr>
 										<td style="padding: 0 3px">
 											<img style="margin-top: 5px; border: none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/23/icon-flight.png">
@@ -197,9 +319,9 @@
 									</tr>
 								</table>
 							</td>
-							<td width="12px"></td>
-							<td align="center" style="width: 95px; padding: 2px 0;margin:0 10px; background:#99CC00; border: 1px solid #8EC000;">
-								<table>
+							<td class="separator" width="12px"></td>
+							<td class="second" align="center" style="width: 95px; padding: 2px 0;margin:0 10px; background:#99CC00; border: 1px solid #8EC000;">
+								<table cellpadding="0" cellspacing="0" border="0">
 									<tr>
 										<td style="padding: 0 3px">
 											<img style="border:none"  src="http://cdn.wego.com/newsletters/newsletter_resource/file/24/icon-hotel.png">
@@ -210,9 +332,9 @@
 									</tr>
 								</table>
 							</td>
-							<td width="12px"></td>
-							<td align="center" style="width:105px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
-								<table>
+							<td class="separator" width="12px"></td>
+							<td class="three" align="center" style="width:105px; padding: 2px 0; background:#99CC00; border: 1px solid #8EC000; ">
+								<table cellpadding="0" cellspacing="0" border="0">
 									<tr>
 										<td style="padding: 0 3px">
 											<img style="border:none" src="http://cdn.wego.com/newsletters/newsletter_resource/file/25/icon-packages.png">
@@ -234,22 +356,22 @@
 			
 			<tr>
 				<td style="padding: 10px 0 20px 0">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table">
 						<tr>
-							<td style="width: 150px" align="middle">
+							<td style="width: 150px" align="middle" class="feat-deal-td">
 							<div style="border-top: 1px solid #ccc "></div>
 							</td>
-							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center">
+							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center" class="feat-deal-td">
 								THIS WEEK'S FEATURED DEALS
 							</td>
-							<td style="width: 150px">
-								<div style="border-top: 1px solid #ccc "></div>
+							<td style="width: 150px" class="feat-deal-td">
+								<div style="border-top: 1px solid #ccc"></div>
 							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
-            <!--
+			<!--
 			<tr>
 				<td style="padding:0; width: 600px" valign="top" width="600px" class="cell">
 					<table cellspacing="0" cellpadding="0" border="0">
@@ -258,10 +380,10 @@
 					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style=" font-size: 12px;color: #999; font-family: Arial;">
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/245?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/245/thumb_image2.jpg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -304,10 +426,10 @@
 							</tr>
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/246?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/246/thumb_ecruising-san-francisco_master_1_.jpg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -353,10 +475,10 @@
 					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style="margin-right:10px; margin-left:10px;  font-size: 12px;color: #999; font-family: Arial;">
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/605?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/605/thumb_visitlondon-640x360.jpg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -399,10 +521,10 @@
 							</tr>
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/600?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/600/thumb_MBS_AugustOffer-200x200.jpeg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -447,10 +569,10 @@
 					<table cellpadding="0" cellspacing="0" border="0" align="center" width="auto" style=" font-size: 12px;color: #999; font-family: Arial;">
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/hotel_deals/598?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/hotel_deal/image/598/thumb_49845.jpg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -493,10 +615,10 @@
 							</tr>
 							<tr>
 							<td valign="top">
-								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px">
+								<table style="margin: 0; font-family: Arial; border: 1px solid #ccc; background: #fff; " cellpadding="0" cellspacing="0" width="180px"  class="featured-item">
 									<tr>
 										<td style="padding: 10px; " align="left">
-                                            <a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+                                            <a href="http://www.wego.com.au/deals/continue/package_deals/244?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnails">
 											<img alt="Deal image" height="170" src="http://cdn.wego.com/deals/package_deal/image/244/thumb_NUNN.jpg" style="border:none" width="170" />
 											</a>
 											<br />
@@ -543,7 +665,7 @@
 					</table>
 				</td>
 			</tr>
-            -->
+			-->
 			<tr>
 				<td style="padding: 0 0 15px 0" align="center">
 					<table width="160px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
@@ -558,33 +680,34 @@
 
 			<tr>
 				<td style="padding: 10px 0 20px 0;">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="padding:0; margin-top: 10px">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0; margin-top: 10px">
 						<tr>
-							<td style="width: 170px" align="middle">
+							<td style="width: 170px" align="middle" class="ted-pict-bd">
 							<div style="border-top: 1px solid #ccc "></div>
 							</td>
-							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center">
+							<td style="font-size: 16px;color: #343434; font-family: Arial; text-align: center" align="center" class="ted-pict-bd">
 								TRAVEL EDITOR'S PICKS
 							</td>
-							<td style="width: 170px">
+							<td style="width: 170px" class="ted-pict-bd">
 								<div style="border-top: 1px solid #ccc "></div>
 							</td>
 						</tr>
 					</table>
 				</td>
 			</tr>
-            <!--
+			
+			<!--
 			<tr>
-				<td style="padding: 10px 0 2px 0; border:1px solid #ccc; background: #fff" align="center">
+				<td style="padding: 10px 0 2px 0; border:1px solid #ccc; background: #fff" align="center" class="ted-picks">
 					<table cellpadding="0" cellspacing="0" border="0" align="center" style="padding:10px 10px 0 10px; background: #fff; margin: 0 auto; font-family: Arial; color: #666666;">
 						<tr>
-							<td rowspan="2" style="width: 150px; padding-bottom: 9px">
-                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+							<td rowspan="2" style="width: 150px; padding-bottom: 9px" class="ted-pick-thumb">
+                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnail">
 							  <img alt="Deal image" height="180" src="http://cdn.wego.com/deals/hotel_deal/image/14/thumb_koh-chang-amari-emerald-cove-koh-chang-186977.jpg" style="border:none" width="180" />
 							  </a>
 							</td>
 							<td style="width: 270px; padding: 0 10px" valign="top" align="left">
-								<div style="display: block; height: 145px; min-height: 144px;">
+								<div class="headline" style="display: block; height: 145px; min-height: 144px;">
 								<h4 style="font-size: 18px; font-weight:normal; font-family: Arial; line-height: normal; padding: 7px; color: #333333; background: #E6FFD9; margin: 0 0 5px 0">
 									<a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:#333; text-decoration:none">
 									Exotic, romantic hideaway at the Amari Emerald Cove Koh Chang
@@ -593,7 +716,7 @@
 								<p style="margin: 10px 0; font-size: 12px;">Secret no more! Thailand&#x27;s stunning 5 star luxury at Amari Emerald Cove Koh Chang. Secluded pristine beaches surrounded by exotic jungle-covered hills</p>
 								</div>
 							</td>
-							<td style="width: 110px; height: 145px; vertical-align: top" align="right">
+							<td style="width: 110px; height: 145px; vertical-align: top" align="right" class="col-3">
 								<span style="font-size: 12px"><a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">splendia.com</a></span><br />
 								<a href="http://www.wego.com.au/deals/continue/hotel_deals/14?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" title="" style="display:block; width: 108px; margin-top: 4px; padding:5px 0 8px 0; vertical-align: baseline; height: 12px; text-align: center; border:1px solid #3E6B05; border:1px solid #3E6B05; background:#349200; font-size: 14px; color: #fff; text-decoration: none">
 								View Detail
@@ -601,7 +724,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
+							<td class="socmed-ted-bar" style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
 								<div style="display: block; margin:2px 0 0 10px; text-align: left; background: #eee; padding: 7px 0 7px 10px;">
 								<font style="font-size: 12px; display: block; width: 150px; float: left">Hotel Deal</font>
 								<span style="display: block; margin: 0; padding: 0 7px; float: right">
@@ -617,13 +740,13 @@
 							</td>
 						</tr>
 						<tr>
-							<td rowspan="2" style="width: 150px; padding-bottom: 9px">
-                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">
+							<td rowspan="2" style="width: 150px; padding-bottom: 9px" class="ted-pick-thumb">
+                              <a style="display: block" href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" class="thumbnail">
 							  <img alt="Deal image" height="180" src="http://cdn.wego.com/deals/hotel_deal/image/73/thumb_pedrinho_1.jpg" style="border:none" width="180" />
 							  </a>
 							</td>
 							<td style="width: 270px; padding: 0 10px" valign="top" align="left">
-								<div style="display: block; height: 145px; min-height: 144px;">
+								<div class="headline" style="display: block; height: 145px; min-height: 144px;">
 								<h4 style="font-size: 18px; font-weight:normal; font-family: Arial; line-height: normal; padding: 7px; color: #333333; background: #E6FFD9; margin: 0 0 5px 0">
 									<a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:#333; text-decoration:none">
 									Arty, historic and unique, Brazil&#x27;s UXUA Casa Hotel
@@ -632,7 +755,7 @@
 								<p style="margin: 10px 0; font-size: 12px;">Be inspired by the evocative and historic artist haven of UXUA Casa Hotel in Brazil, designed by local artisans using traditional building methods and decorated with Brazilian art and antiques </p>
 								</div>
 							</td>
-							<td style="width: 110px; height: 145px; vertical-align: top" align="right">
+							<td style="width: 110px; height: 145px; vertical-align: top" align="right" class="col-3">
 								<span style="font-size: 12px"><a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter">uxua.com</a></span><br />
 								<a href="http://www.wego.com.au/deals/continue/hotel_deals/73?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" title="" style="display:block; width: 108px; margin-top: 4px; padding:5px 0 8px 0; vertical-align: baseline; height: 12px; text-align: center; border:1px solid #3E6B05; border:1px solid #3E6B05; background:#349200; font-size: 14px; color: #fff; text-decoration: none">
 								View Detail
@@ -640,7 +763,7 @@
 							</td>
 						</tr>
 						<tr>
-							<td style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
+							<td class="socmed-ted-bar" style="background: #fff; alignment-adjust: central; padding-bottom: 9px" colspan="2">
 								<div style="display: block; margin:2px 0 0 10px; text-align: left; background: #eee; padding: 7px 0 7px 10px;">
 								<font style="font-size: 12px; display: block; width: 150px; float: left">Hotel Deal</font>
 								<span style="display: block; margin: 0; padding: 0 7px; float: right">
@@ -658,10 +781,12 @@
 					</table>
 				</td>
 			</tr>
+			
 			-->
+			
 			<tr>
 				<td style="padding: 25px 0 10px 0" align="center">
-					<table width="250px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
+					<table class="view-all-ted" width="250px" cellpadding="0" cellspacing="0" border="0" align="center" style="background:#99CC00; border: 1px solid #8EC000; margin: 0 auto;">
 						<tr>
 							<td style="padding: 10px 0;" align="center" valign="middle">
 								<a href="http://www.wego.com.au/deals/themes/travel-editor-s-picks?ts_code=d4f4b&amp;utm_campaign=au&amp;utm_medium=email&amp;utm_source=newsletter" style="color:white; font-family: Arial; font-size: 16px; text-decoration: none">View all travel editor's picks</a>
@@ -673,15 +798,15 @@
 			
 			<tr>
 				<td style="padding: 10px 0 0 0">
-					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px"  class="table" style="padding:0">
+					<table cellpadding="0" cellspacing="0" border="0" align="center" width="600px" class="table" style="padding:0">
 						<tr>
-							<td style="width: 195px" align="middle">
+							<td style="width: 195px" align="middle" class="conect-with-us-td">
 							<div style="border-top: 1px solid #ccc "></div>
 							</td>
-							<td style="font-size: 16px;color: #333; font-family: Arial; text-align: center" align="center">
+							<td style="font-size: 16px;color: #333; font-family: Arial; text-align: center" align="center" class="conect-with-us-td">
 								CONNECT WITH US
 							</td>
-							<td style="width: 195px">
+							<td style="width: 195px"class="conect-with-us-td">
 								<div style="border-top: 1px solid #ccc "></div>
 							</td>
 						</tr>
